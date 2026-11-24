@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's for Dinner? - Lasagna Bolognese</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <div class="brand-logo"><i class="fa-solid fa-utensils"></i></div>
+          <div class="brand-text d-none d-md-block">
+            <h1>What's For Dinner</h1>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </a>
+        <div class="nav-actions d-flex align-items-center gap-4">
+          <a href="#" class="nav-icon-btn"><i class="fa-regular fa-bookmark"></i></a>
+          <a href="#" class="nav-icon-btn"><i class="fa-solid fa-clock-rotate-left"></i></a>
+          <a href="#" class="nav-icon-btn"><i class="fa-solid fa-gear"></i></a>
+          <img src="./images/logo.jpg" alt="User Profile" class="user-avatar" />
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="recipe-card row g-0">
+        <div class="col-lg-5">
+          <!-- JS SECTION 1 START: Replace this static image, rating, and statistics -->
+          <div class="recipe-image-container" id="imgSection"></div>
+          <!-- JS SECTION 1 END -->
+        </div>
+
+        <div class="col-lg-7 p-4 p-md-5 recipe-details-column">
+          <div class="recipe-scroll-content">
+            <!-- JS SECTION 2 START: Generate recipe title, description, badges, and alert -->
+            <div id="infoSection"></div>
+            <!-- JS SECTION 2 END -->
+            <!-- Bootstrap tabs below remain static -->
+            <ul class="nav nav-tabs mt-4 mb-4" id="recipeTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="ingredients-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ingredients"
+                  type="button"
+                  role="tab">
+                  <i class="fa-solid fa-list-ul"></i> Ingredients
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="instructions-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#instructions"
+                  type="button"
+                  role="tab">
+                  <i class="fa-solid fa-book-open"></i> Instructions
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="nutrition-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nutrition"
+                  type="button"
+                  role="tab">
+                  <i class="fa-solid fa-chart-pie"></i> Nutrition
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tips-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tips"
+                  type="button"
+                  role="tab">
+                  <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content scrollable-tabs" id="recipeTabsContent">
+              <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+                <!-- JS SECTION 3 START: Generate ingredient items  -->
+                <ul class="ingredient-list" id="ingredientsList"></ul>
+              </div>
+              <!-- JS SECTION 3 END -->
+              <div class="tab-pane fade" id="instructions" role="tabpanel">
+                <!-- JS SECTION 4 START: Generate numbered steps  -->
+                <ul class="instruction-list" id="instructionsList"></ul>
+              </div>
+              <!-- JS SECTION 4 END -->
+              <div class="tab-pane fade" id="nutrition" role="tabpanel">
+                <!-- JS SECTION 5 START: Populate nutrition cards  -->
+                <div class="nutrition-grid" id="nutritionGrid"></div>
+              </div>
+              <!-- JS SECTION 5 END -->
+              <div class="tab-pane fade" id="tips" role="tabpanel">
+                <!-- JS SECTION 6 START: Generate chef tips -->
+                <div id="tipsList"></div>
+              </div>
+              <!-- JS SECTION 6 END -->
+            </div>
+          </div>
+          <!-- JS SECTION 7: Connect this button to Generate Function -->
+          <button class="btn btn-gradient mt-4" type="button" onclick="GetRandomRecipe()">
+            <i class="fa-solid fa-arrows-rotate"></i> Try Another Recipe
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Add your JavaScript implementation to main.js during the lesson. -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
